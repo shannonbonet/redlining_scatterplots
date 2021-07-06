@@ -61,7 +61,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="App">
       {water.map((buttonLabel, i) => (
         <button
           className="fill"
@@ -72,6 +72,7 @@ const App = () => {
           {buttonLabel}
         </button>
       ))}
+      <p className="legend-title"> Housing burden percentile</p>
       <ScatterPlot data={data} xDataKey={"zip"} yDataKey={waterKey} />
       {chemical.map((buttonLabel, i) => (
         <button
@@ -83,6 +84,7 @@ const App = () => {
           {buttonLabel}
         </button>
       ))}
+      <p className="legend-title"> Housing burden percentile</p>
       <ScatterPlot data={data} xDataKey={"zip"} yDataKey={chemKey} />
       {health.map((buttonLabel, i) => (
         <button
@@ -94,6 +96,7 @@ const App = () => {
           {buttonLabel}
         </button>
       ))}
+      <p className="legend-title"> Housing burden percentile</p>
       <ScatterPlot data={data} xDataKey={"zip"} yDataKey={healthKey} />
       {socioeconomic.map((buttonLabel, i) => (
         <button
@@ -105,6 +108,7 @@ const App = () => {
           {buttonLabel}
         </button>
       ))}
+      <p className="legend-title"> Housing burden percentile</p>
       <ScatterPlot data={data} xDataKey={"zip"} yDataKey={soEconKey} />
     </div>
   );
