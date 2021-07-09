@@ -23,10 +23,10 @@ const ScatterPlot = (props: any) => {
     (d: any) => d.housing_burden >= 30 && d.housing_burden < 50
   );
   ranges[3] = data.filter(
-    (d: any) => d.housing_burden >= 50 && d.housing_burden < 70
+    (d: any) => d.housing_burden >= 50 && d.housing_burden < 80
   );
   ranges[4] = data.filter(
-    (d: any) => d.housing_burden >= 70 && d.housing_burden < 100
+    (d: any) => d.housing_burden >= 80 && d.housing_burden < 100
   );
 
   return (
@@ -76,13 +76,13 @@ const ScatterPlot = (props: any) => {
         fill={colors[2]}
       />
       <Scatter
-        name={"50-70"}
+        name={"50-80"}
         data={ranges[3]}
         legendType={"triangle"}
         fill={colors[3]}
       />
       <Scatter
-        name={"70-100"}
+        name={"80-100"}
         data={ranges[4]}
         legendType={"triangle"}
         fill={colors[4]}
