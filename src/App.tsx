@@ -6,10 +6,10 @@ import { all_data } from "./data";
 const App = () => {
   const data = all_data;
 
-  const [waterKey, setWaterKey] = useState("");
-  const [chemKey, setChemKey] = useState("");
-  const [healthKey, setHealthKey] = useState("");
-  const [soEconKey, setSoEconKey] = useState("");
+  const [waterKey, setWaterKey] = useState("groundwater_threats");
+  const [chemKey, setChemKey] = useState("pollution");
+  const [healthKey, setHealthKey] = useState("asthma");
+  const [soEconKey, setSoEconKey] = useState("poverty");
 
   const water = ["groundwater threats", "impaired waterbodies"];
   const chemical = [

@@ -15,18 +15,18 @@ const ScatterPlot = (props: any) => {
   const colors = ["#30B189", "#96C066", "#F9A84A", "#F28147", "#E2565F"];
   const data = props.data;
   const ranges = [];
-  ranges[0] = data.filter((d: any) => d.housing_burden < 20);
+  ranges[0] = data.filter((d: any) => d.housing_burden < 15);
   ranges[1] = data.filter(
-    (d: any) => d.housing_burden >= 20 && d.housing_burden < 40
+    (d: any) => d.housing_burden >= 15 && d.housing_burden < 30
   );
   ranges[2] = data.filter(
-    (d: any) => d.housing_burden >= 40 && d.housing_burden < 60
+    (d: any) => d.housing_burden >= 30 && d.housing_burden < 50
   );
   ranges[3] = data.filter(
-    (d: any) => d.housing_burden >= 60 && d.housing_burden < 80
+    (d: any) => d.housing_burden >= 50 && d.housing_burden < 70
   );
   ranges[4] = data.filter(
-    (d: any) => d.housing_burden >= 80 && d.housing_burden < 100
+    (d: any) => d.housing_burden >= 70 && d.housing_burden < 100
   );
 
   return (
@@ -58,25 +58,25 @@ const ScatterPlot = (props: any) => {
       <Tooltip />
       <Legend align="right" verticalAlign="top" layout="vertical" />
       <Scatter
-        name={"< 20"}
+        name={"< 15"}
         data={ranges[0]}
         legendType={"triangle"}
         fill={colors[0]}
       />
       <Scatter
-        name={"20-50"}
+        name={"15-30"}
         data={ranges[1]}
         legendType={"triangle"}
         fill={colors[1]}
       />
       <Scatter
-        name={"50-70"}
+        name={"30-50"}
         data={ranges[2]}
         legendType={"triangle"}
         fill={colors[2]}
       />
       <Scatter
-        name={"70-100"}
+        name={"50-70"}
         data={ranges[3]}
         legendType={"triangle"}
         fill={colors[3]}
