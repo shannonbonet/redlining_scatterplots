@@ -6,10 +6,10 @@ import { all_data } from "./data";
 const App = () => {
   const data = all_data;
 
-  const [waterKey, setWaterKey] = useState("");
-  const [chemKey, setChemKey] = useState("");
-  const [healthKey, setHealthKey] = useState("");
-  const [soEconKey, setSoEconKey] = useState("");
+  const [waterKey, setWaterKey] = useState("groundwater_threats");
+  const [chemKey, setChemKey] = useState("pollution");
+  const [healthKey, setHealthKey] = useState("asthma");
+  const [soEconKey, setSoEconKey] = useState("poverty");
 
   const water = ["groundwater threats", "impaired waterbodies"];
   const chemical = [
@@ -61,7 +61,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <div className="App">
       {water.map((buttonLabel, i) => (
         <button
           className="fill"
@@ -72,6 +72,7 @@ const App = () => {
           {buttonLabel}
         </button>
       ))}
+      <p className="legend-title"> Housing burden percentile</p>
       <ScatterPlot data={data} xDataKey={"zip"} yDataKey={waterKey} />
       {chemical.map((buttonLabel, i) => (
         <button
@@ -83,6 +84,7 @@ const App = () => {
           {buttonLabel}
         </button>
       ))}
+      <p className="legend-title"> Housing burden percentile</p>
       <ScatterPlot data={data} xDataKey={"zip"} yDataKey={chemKey} />
       {health.map((buttonLabel, i) => (
         <button
@@ -94,6 +96,7 @@ const App = () => {
           {buttonLabel}
         </button>
       ))}
+      <p className="legend-title"> Housing burden percentile</p>
       <ScatterPlot data={data} xDataKey={"zip"} yDataKey={healthKey} />
       {socioeconomic.map((buttonLabel, i) => (
         <button
@@ -105,6 +108,7 @@ const App = () => {
           {buttonLabel}
         </button>
       ))}
+      <p className="legend-title"> Housing burden percentile</p>
       <ScatterPlot data={data} xDataKey={"zip"} yDataKey={soEconKey} />
     </div>
   );

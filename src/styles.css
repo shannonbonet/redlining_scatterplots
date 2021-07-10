@@ -1,6 +1,12 @@
 .App {
-  font-family: sans-serif;
+  font-family: "benton-sans";
   text-align: center;
+}
+
+.legend-title {
+  position: relative;
+  left: 35%;
+  /* edit later  */
 }
 
 button {
@@ -13,7 +19,7 @@ button {
   font-size: 16px;
   /* text-transform: uppercase; */
   border-radius: 8px;
-  font-family: "benton-sans";
+  /* font-family: "benton-sans"; */
 }
 
 button {
